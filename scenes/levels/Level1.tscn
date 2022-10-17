@@ -1,0 +1,399 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://assets/gfx/Grass.png" type="Texture" id=1]
+[ext_resource path="res://scenes/objects/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/gfx/Water.png" type="Texture" id=3]
+[ext_resource path="res://scenes/objects/interactable/EndTeleport.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/control/GameSave.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/objects/tooltips/tooltip_movement.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/objects/tooltips/tooltip_win.tscn" type="PackedScene" id=7]
+
+[sub_resource type="ConvexPolygonShape2D" id=5]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="TileSet" id=1]
+0/name = "Grass.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 16, 0, 16, 16 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "Grass.png 1"
+1/texture = ExtResource( 1 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 16, 16 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "Grass.png 2"
+2/texture = ExtResource( 1 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 32, 0, 16, 16 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "Grass.png 3"
+3/texture = ExtResource( 1 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 48, 0, 16, 16 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "Grass.png 4"
+4/texture = ExtResource( 1 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 64, 0, 16, 16 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "Grass.png 5"
+5/texture = ExtResource( 1 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 80, 0, 16, 16 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "Grass.png 6"
+6/texture = ExtResource( 1 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 16, 48, 16, 16 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "Grass.png 7"
+7/texture = ExtResource( 1 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 32, 48, 16, 16 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "Grass.png 8"
+8/texture = ExtResource( 1 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 48, 48, 16, 16 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+9/name = "Grass.png 9"
+9/texture = ExtResource( 1 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 16, 64, 16, 16 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
+10/name = "Grass.png 10"
+10/texture = ExtResource( 1 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 32, 64, 16, 16 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape_one_way = false
+10/shape_one_way_margin = 0.0
+10/shapes = [  ]
+10/z_index = 0
+11/name = "Grass.png 11"
+11/texture = ExtResource( 1 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 48, 64, 16, 16 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape_one_way = false
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
+11/z_index = 0
+12/name = "Grass.png 12"
+12/texture = ExtResource( 1 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 16, 80, 16, 16 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape_one_way = false
+12/shape_one_way_margin = 0.0
+12/shapes = [  ]
+12/z_index = 0
+13/name = "Grass.png 13"
+13/texture = ExtResource( 1 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 32, 80, 16, 16 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 0, 0 )
+13/navigation_offset = Vector2( 0, 0 )
+13/shape_offset = Vector2( 0, 0 )
+13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+13/shape_one_way = false
+13/shape_one_way_margin = 0.0
+13/shapes = [  ]
+13/z_index = 0
+14/name = "Grass.png 14"
+14/texture = ExtResource( 1 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 48, 80, 16, 16 )
+14/tile_mode = 0
+14/occluder_offset = Vector2( 0, 0 )
+14/navigation_offset = Vector2( 0, 0 )
+14/shape_offset = Vector2( 0, 0 )
+14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+14/shape_one_way = false
+14/shape_one_way_margin = 0.0
+14/shapes = [  ]
+14/z_index = 0
+15/name = "Grass.png 15"
+15/texture = ExtResource( 1 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 112, 64, 16, 16 )
+15/tile_mode = 0
+15/occluder_offset = Vector2( 0, 0 )
+15/navigation_offset = Vector2( 0, 0 )
+15/shape_offset = Vector2( 0, 0 )
+15/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+15/shape_one_way = false
+15/shape_one_way_margin = 0.0
+15/shapes = [  ]
+15/z_index = 0
+16/name = "Grass.png 16"
+16/texture = ExtResource( 1 )
+16/tex_offset = Vector2( 0, 0 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 96, 64, 16, 16 )
+16/tile_mode = 0
+16/occluder_offset = Vector2( 0, 0 )
+16/navigation_offset = Vector2( 0, 0 )
+16/shape_offset = Vector2( 0, 0 )
+16/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+16/shape_one_way = false
+16/shape_one_way_margin = 0.0
+16/shapes = [  ]
+16/z_index = 0
+17/name = "Grass.png 17"
+17/texture = ExtResource( 1 )
+17/tex_offset = Vector2( 0, 0 )
+17/modulate = Color( 1, 1, 1, 1 )
+17/region = Rect2( 112, 80, 16, 16 )
+17/tile_mode = 0
+17/occluder_offset = Vector2( 0, 0 )
+17/navigation_offset = Vector2( 0, 0 )
+17/shape_offset = Vector2( 0, 0 )
+17/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+17/shape_one_way = false
+17/shape_one_way_margin = 0.0
+17/shapes = [  ]
+17/z_index = 0
+18/name = "Grass.png 18"
+18/texture = ExtResource( 1 )
+18/tex_offset = Vector2( 0, 0 )
+18/modulate = Color( 1, 1, 1, 1 )
+18/region = Rect2( 96, 80, 16, 16 )
+18/tile_mode = 0
+18/occluder_offset = Vector2( 0, 0 )
+18/navigation_offset = Vector2( 0, 0 )
+18/shape_offset = Vector2( 0, 0 )
+18/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+18/shape_one_way = false
+18/shape_one_way_margin = 0.0
+18/shapes = [  ]
+18/z_index = 0
+19/name = "Grass.png 19"
+19/texture = ExtResource( 1 )
+19/tex_offset = Vector2( 0, 0 )
+19/modulate = Color( 1, 1, 1, 1 )
+19/region = Rect2( 64, 64, 16, 16 )
+19/tile_mode = 0
+19/occluder_offset = Vector2( 0, 0 )
+19/navigation_offset = Vector2( 0, 0 )
+19/shape_offset = Vector2( 0, 0 )
+19/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+19/shape_one_way = false
+19/shape_one_way_margin = 0.0
+19/shapes = [  ]
+19/z_index = 0
+20/name = "Grass.png 20"
+20/texture = ExtResource( 1 )
+20/tex_offset = Vector2( 0, 0 )
+20/modulate = Color( 1, 1, 1, 1 )
+20/region = Rect2( 80, 64, 16, 16 )
+20/tile_mode = 0
+20/occluder_offset = Vector2( 0, 0 )
+20/navigation_offset = Vector2( 0, 0 )
+20/shape_offset = Vector2( 0, 0 )
+20/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+20/shape_one_way = false
+20/shape_one_way_margin = 0.0
+20/shapes = [  ]
+20/z_index = 0
+21/name = "Grass.png 21"
+21/texture = ExtResource( 1 )
+21/tex_offset = Vector2( 0, 0 )
+21/modulate = Color( 1, 1, 1, 1 )
+21/region = Rect2( 64, 80, 16, 16 )
+21/tile_mode = 0
+21/occluder_offset = Vector2( 0, 0 )
+21/navigation_offset = Vector2( 0, 0 )
+21/shape_offset = Vector2( 0, 0 )
+21/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+21/shape_one_way = false
+21/shape_one_way_margin = 0.0
+21/shapes = [  ]
+21/z_index = 0
+22/name = "Grass.png 22"
+22/texture = ExtResource( 1 )
+22/tex_offset = Vector2( 0, 0 )
+22/modulate = Color( 1, 1, 1, 1 )
+22/region = Rect2( 80, 80, 16, 16 )
+22/tile_mode = 0
+22/occluder_offset = Vector2( 0, 0 )
+22/navigation_offset = Vector2( 0, 0 )
+22/shape_offset = Vector2( 0, 0 )
+22/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+22/shape_one_way = false
+22/shape_one_way_margin = 0.0
+22/shapes = [  ]
+22/z_index = 0
+23/name = "Grass.png 23"
+23/texture = ExtResource( 1 )
+23/tex_offset = Vector2( 0, 0 )
+23/modulate = Color( 1, 1, 1, 1 )
+23/region = Rect2( 128, 0, 16, 16 )
+23/tile_mode = 0
+23/occluder_offset = Vector2( 0, 0 )
+23/navigation_offset = Vector2( 0, 0 )
+23/shape_offset = Vector2( 0, 0 )
+23/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+23/shape = SubResource( 5 )
+23/shape_one_way = false
+23/shape_one_way_margin = 1.0
+23/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 5 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+23/z_index = 0
+
+[node name="Level1" type="TileMap"]
+position = Vector2( -60, 16 )
+tile_set = SubResource( 1 )
+cell_size = Vector2( 16, 16 )
+cell_custom_transform = Transform2D( 8, 0, 0, 8, 0, 0 )
+show_collision = true
+format = 1
+tile_data = PoolIntArray( -393189, 23, 0, -393188, 23, 0, -393187, 23, 0, -393186, 23, 0, -393185, 23, 0, -393184, 23, 0, -327653, 23, 0, -327652, 6, 0, -327651, 7, 0, -327650, 7, 0, -327649, 8, 0, -327648, 23, 0, -262130, 23, 0, -262129, 23, 0, -262128, 23, 0, -262127, 23, 0, -262126, 23, 0, -262125, 23, 0, -262124, 23, 0, -262123, 23, 0, -262122, 23, 0, -262121, 23, 0, -262120, 23, 0, -262119, 23, 0, -262118, 23, 0, -262117, 23, 0, -262116, 9, 0, -262115, 0, 0, -262114, 10, 0, -262113, 11, 0, -262112, 23, 0, -196594, 23, 0, -196593, 6, 0, -196592, 7, 0, -196591, 7, 0, -196590, 7, 0, -196589, 7, 0, -196588, 7, 0, -196587, 7, 0, -196586, 7, 0, -196585, 7, 0, -196584, 7, 0, -196583, 7, 0, -196582, 7, 0, -196581, 7, 0, -196580, 22, 0, -196579, 10, 0, -196578, 1, 0, -196577, 11, 0, -196576, 23, 0, -131058, 23, 0, -131057, 9, 0, -131056, 0, 0, -131055, 0, 0, -131054, 0, 0, -131053, 3, 0, -131052, 0, 0, -131051, 1, 0, -131050, 0, 0, -131049, 0, 0, -131048, 2, 0, -131047, 2, 0, -131046, 2, 0, -131045, 2, 0, -131044, 10, 0, -131043, 5, 0, -131042, 3, 0, -131041, 11, 0, -131040, 23, 0, -65522, 23, 0, -65521, 9, 0, -65520, 1, 0, -65519, 19, 0, -65518, 13, 0, -65517, 13, 0, -65516, 13, 0, -65515, 13, 0, -65514, 13, 0, -65513, 13, 0, -65512, 13, 0, -65511, 13, 0, -65510, 13, 0, -65509, 13, 0, -65508, 20, 0, -65507, 1, 0, -65506, 10, 0, -65505, 11, 0, -65504, 23, 0, 14, 23, 0, 15, 9, 0, 16, 5, 0, 17, 11, 0, 18, 23, 0, 19, 23, 0, 20, 23, 0, 21, 23, 0, 22, 23, 0, 23, 23, 0, 24, 23, 0, 25, 23, 0, 26, 23, 0, 27, 23, 0, 28, 9, 0, 29, 10, 0, 30, 1, 0, 31, 11, 0, 32, 23, 0, 65550, 23, 0, 65551, 9, 0, 65552, 0, 0, 65553, 11, 0, 65554, 23, 0, 65563, 23, 0, 65564, 12, 0, 65565, 13, 0, 65566, 13, 0, 65567, 14, 0, 65568, 23, 0, 131086, 23, 0, 131087, 9, 0, 131088, 0, 0, 131089, 11, 0, 131090, 23, 0, 131099, 23, 0, 131100, 23, 0, 131101, 23, 0, 131102, 23, 0, 131103, 23, 0, 131104, 23, 0, 196622, 23, 0, 196623, 9, 0, 196624, 0, 0, 196625, 11, 0, 196626, 23, 0, 262151, 23, 0, 262152, 23, 0, 262153, 23, 0, 262154, 23, 0, 262155, 23, 0, 262156, 23, 0, 262157, 23, 0, 262158, 23, 0, 262159, 9, 0, 262160, 0, 0, 262161, 11, 0, 262162, 23, 0, 327687, 23, 0, 327688, 6, 0, 327689, 7, 0, 327690, 7, 0, 327691, 7, 0, 327692, 7, 0, 327693, 7, 0, 327694, 7, 0, 327695, 22, 0, 327696, 0, 0, 327697, 11, 0, 327698, 23, 0, 393223, 23, 0, 393224, 9, 0, 393225, 10, 0, 393226, 10, 0, 393227, 10, 0, 393228, 10, 0, 393229, 3, 0, 393230, 10, 0, 393231, 1, 0, 393232, 5, 0, 393233, 11, 0, 393234, 23, 0, 458759, 23, 0, 458760, 9, 0, 458761, 1, 0, 458762, 19, 0, 458763, 13, 0, 458764, 13, 0, 458765, 13, 0, 458766, 13, 0, 458767, 13, 0, 458768, 13, 0, 458769, 14, 0, 458770, 23, 0, 524295, 23, 0, 524296, 9, 0, 524297, 3, 0, 524298, 11, 0, 524299, 23, 0, 524300, 23, 0, 524301, 23, 0, 524302, 23, 0, 524303, 23, 0, 524304, 23, 0, 524305, 23, 0, 524306, 23, 0, 589831, 23, 0, 589832, 9, 0, 589833, 0, 0, 589834, 11, 0, 589835, 23, 0, 655367, 23, 0, 655368, 9, 0, 655369, 0, 0, 655370, 11, 0, 655371, 23, 0, 720903, 23, 0, 720904, 9, 0, 720905, 0, 0, 720906, 11, 0, 720907, 23, 0, 786439, 23, 0, 786440, 9, 0, 786441, 0, 0, 786442, 11, 0, 786443, 23, 0, 851975, 23, 0, 851976, 9, 0, 851977, 0, 0, 851978, 11, 0, 851979, 23, 0, 917511, 23, 0, 917512, 12, 0, 917513, 13, 0, 917514, 14, 0, 917515, 23, 0, 983047, 23, 0, 983048, 23, 0, 983049, 23, 0, 983050, 23, 0, 983051, 23, 0 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 152, 218 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+show_behind_parent = true
+margin_left = -267.0
+margin_top = -212.0
+margin_right = 749.0
+margin_bottom = 483.0
+texture = ExtResource( 3 )
+stretch_mode = 2
+
+[node name="EndTeleport" parent="." instance=ExtResource( 4 )]
+position = Vector2( 491, -28 )
+
+[node name="GameSave" parent="." instance=ExtResource( 5 )]
+
+[node name="tooltip_movement" parent="." instance=ExtResource( 6 )]
+position = Vector2( 197, 137 )
+scale = Vector2( 0.75, 0.75 )
+
+[node name="tooltip_win" parent="." instance=ExtResource( 7 )]
+position = Vector2( 337, -83 )
+scale = Vector2( 0.75, 0.75 )
+
+[connection signal="level_complete" from="EndTeleport" to="GameSave" method="_on_EndTeleport_level_complete"]
