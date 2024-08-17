@@ -16,6 +16,6 @@ texture = ExtResource( 1 )
 [node name="Label" type="Label" parent="."]
 margin_right = 40.0
 margin_bottom = 14.0
-text = "Use arrow keys 
-or WASD to move"
+text = "Use The DPAD to
+Move"
 align = 1
