@@ -81,7 +81,7 @@ func get_input():
 		generate_ghost()
 		pass
 	
-	# Handle normal movement
+	# Handle normal movement	
 	if Input.is_action_pressed("move_right"):
 		$AnimatedSprite.play("walk_right")
 		time_point["steps"].append("move_right")
@@ -125,3 +125,28 @@ func check_rock_collision(velocity):
 	var rock = get_slide_collision(0).collider as Rock
 	if rock:
 		rock.push(velocity)
+
+# Handle Touchscreen Input Events
+func _on_TouchScreenButtonRight_pressed():
+	Input.action_press("move_right")
+
+func _on_TouchScreenButtonRight_released():
+	Input.action_release("move_right")
+
+func _on_TouchScreenButtonLeft_pressed():
+	Input.action_press("move_left")
+
+func _on_TouchScreenButtonLeft_released():
+	Input.action_release("move_left")
+
+func _on_TouchScreenButtonUp_pressed():
+	Input.action_press("move_up")
+
+func _on_TouchScreenButtonUp_released():
+	Input.action_release("move_up")
+
+func _on_TouchScreenButtonDown_pressed():
+	Input.action_press("move_down")
+
+func _on_TouchScreenButtonDown_released():
+	Input.action_release("move_down")

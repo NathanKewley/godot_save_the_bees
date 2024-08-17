@@ -627,10 +627,10 @@ position = Vector2( 34, 116 )
 current = true
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_left = -191.0
-margin_top = -57.0
-margin_right = 2.0
-margin_bottom = 329.0
+margin_left = -262.0
+margin_top = -54.0
+margin_right = -69.0
+margin_bottom = 332.0
 color = Color( 0.333333, 0.25098, 0.25098, 0.6 )
 
 [node name="back_Button" type="Button" parent="ColorRect"]
@@ -662,13 +662,12 @@ position = Vector2( 94, 25 )
 
 [node name="InitialInstructions" type="Label" parent="ColorRect"]
 margin_left = 68.0
-margin_top = 139.0
+margin_top = 152.0
 margin_right = 191.0
-margin_bottom = 255.0
+margin_bottom = 268.0
 custom_fonts/font = SubResource( 17 )
-text = "Use WASD or
-The Aarow 
-keys to move
+text = "Use the D-PAD
+To walk
 around and 
 select a level
 
@@ -677,7 +676,7 @@ align = 1
 uppercase = true
 
 [node name="ButtonBlue" parent="ColorRect/InitialInstructions" instance=ExtResource( 6 )]
-position = Vector2( 99, 101 )
+position = Vector2( 103, 92 )
 
 [connection signal="pressed" from="TileMap/level_switch1" to="." method="_on_level_switch1_pressed"]
 [connection signal="unpressed" from="TileMap/level_switch1" to="." method="_on_level_switch1_unpressed"]
