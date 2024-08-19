@@ -25,7 +25,6 @@ func _on_ButtonBlue_unpressed():
 	$BridgeBlue_1.toggle()
 	$BridgeBlue_2.toggle()
 
-
 func _on_ButtonRed_pressed():
 	$BridgeRed_1.toggle()
 

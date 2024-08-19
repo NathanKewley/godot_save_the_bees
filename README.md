@@ -1,8 +1,8 @@
-# godot_learning
+# Save The Bees
 
-PSP Port and some updatex and fixes for this test game. This is now the default branch as it has some improvements over the original.
+`Save The Bees` is a small puzzle game that I created mostly to serve as a project to learn the Godot Engine. As such probably nothing in this project is done well and should not be used as a reference for how to build a game in Godot.
 
-![psp-image](assets/screenshots/psp-photo.png)
+The game only has 7 small levels as it was a learning project. I used to opportunity to play around with the idea of solving puzzles by creating ghosts of onself to complete parts of the puzzle "in the past". Concept generally seems to work pretty well. Might or might not expand this into a more full game.
 
 ## Assets
 
@@ -10,17 +10,19 @@ The cute assets are by [CupNooble](https://cupnooble.itch.io/)
 
 ## PSP Vita Stuff
 
-So I got a psp-vita and some mad lad did a [godot 3.5 port for the vita](https://github.com/SonicMastr/godot-vita)
+Ok so I am in Japan for a bit and got a PSP-Vita on a whim. The Vita is soo cool, wish I got one years ago.
 
-It works quite well but there are some gotchas of course:
+Then I found out someone has made a [godot 3.5 port for the vita](https://github.com/SonicMastr/godot-vita) which is what I made this game in... So figgured I might see if I can get it to run.
 
-* Specific assets for PSP-Vita live area have to be very specific or the VPK will not install. I had to use this to do the type conversion correctly after creating the vpk: [vpk-editor](https://qberty.com/ps-vita-vpk-editor/). (you will know you need to do this if the install gets to like 99% then gives some random error ending in 3D)
-* Changing project name seems to fuck everyhting up.... dont do that
-* Set godot to GLES2 in the top right
-* From github you need both the gotdot fork and the vita-template
-* install the vita tempalte in godot via the `editor -> manage export templates`
-* in `project settings -> general -> rendering -> quality` enable fallback to GLES2
-* Prob other shit I dont remember // have not encountered yet
+It works quite well.
+
+VPK can be downloaded from GitHub Releases.
+
+![psp-image](assets/screenshots/psp-photo.png)
+
+![image1](assets/screenshots/shot1.png)
+
+![image2](assets/screenshots/shot2.png)
 
 ## Web Version
 

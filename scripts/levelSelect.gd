@@ -1,5 +1,7 @@
 extends Node2D
 
+## NOT USED
+
 func _ready():
 	# Enable buttons based on the level the player is up to
 	if($GameSave.game_save["current_level_unlock"] >= 1):
