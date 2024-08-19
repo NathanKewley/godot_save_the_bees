@@ -1,5 +1,9 @@
 # godot_learning
 
+PSP Port and some updatex and fixes for this test game. This is now the default branch as it has some improvements over the original.
+
+![psp-image](assets/screenshots/psp-photo.png)
+
 ## Assets
 
 The cute assets are by [CupNooble](https://cupnooble.itch.io/)
