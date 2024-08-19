@@ -33,4 +33,4 @@ func _on_EndTeleport_level_complete():
 	if(game_save["current_level_unlock"] < (game_save["current_level"] + 1)):
 		game_save["current_level_unlock"] = (game_save["current_level"] + 1)
 	save_data(save_file)
-	get_tree().change_scene("res://scenes/levelSelect.tscn")
+	get_tree().change_scene("res://scenes/Menu.tscn")

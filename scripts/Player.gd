@@ -100,6 +100,9 @@ func get_input():
 		velocity.y -= 1
 	if Input.is_action_pressed("restart_level"):
 		get_tree().reload_current_scene()
+		
+	if Input.is_action_pressed("menu"):
+		get_tree().change_scene("res://scenes/Menu.tscn")
 
 	# if a move is places
 	if velocity.length() > 0:
