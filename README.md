@@ -1,5 +1,9 @@
 # godot_learning
 
+## Assets
+
+The cute assets are by [CupNooble](https://cupnooble.itch.io/)
+
 ## PSP Vita Stuff
 
 So I got a psp-vita and some mad lad did a [godot 3.5 port for the vita](https://github.com/SonicMastr/godot-vita)

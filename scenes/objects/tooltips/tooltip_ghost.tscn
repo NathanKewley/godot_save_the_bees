@@ -18,7 +18,7 @@ margin_left = -14.0
 margin_right = 176.0
 margin_bottom = 68.0
 text = "Move to the button. Then
-press 'Left Shift' to reset
+press 'Start' to reset
 time and generate a ghost
 of your last moves"
 align = 1

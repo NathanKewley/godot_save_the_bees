@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="SaveTheBees"
-run/main_scene="res://scenes/levelSelect.tscn"
+run/main_scene="res://scenes/Menu.tscn"
 config/icon="res://icon.png"
 
 [display]

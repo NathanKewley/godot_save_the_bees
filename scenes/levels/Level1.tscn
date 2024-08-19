@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/gfx/Grass.png" type="Texture" id=1]
 [ext_resource path="res://scenes/objects/Player.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://scenes/control/GameSave.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/objects/tooltips/tooltip_movement.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/objects/tooltips/tooltip_win.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/HUD.tscn" type="PackedScene" id=8]
 
 [sub_resource type="ConvexPolygonShape2D" id=5]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -395,5 +396,7 @@ scale = Vector2( 0.75, 0.75 )
 [node name="tooltip_win" parent="." instance=ExtResource( 7 )]
 position = Vector2( 337, -83 )
 scale = Vector2( 0.75, 0.75 )
+
+[node name="HUD" parent="." instance=ExtResource( 8 )]
 
 [connection signal="level_complete" from="EndTeleport" to="GameSave" method="_on_EndTeleport_level_complete"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://assets/gfx/Water.png" type="Texture" id=1]
 [ext_resource path="res://assets/gfx/Grass.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://scenes/objects/tooltips/tooltip_button.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/objects/interactable/BridgeBlue.tscn" type="PackedScene" id=10]
 [ext_resource path="res://scripts/levels/Level2.gd" type="Script" id=11]
+[ext_resource path="res://scenes/HUD.tscn" type="PackedScene" id=12]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -466,6 +467,8 @@ scale = Vector2( 0.75, 0.75 )
 [node name="tooltip_button" parent="." instance=ExtResource( 9 )]
 position = Vector2( 68, -64 )
 scale = Vector2( 0.75, 0.75 )
+
+[node name="HUD" parent="." instance=ExtResource( 12 )]
 
 [connection signal="level_complete" from="EndTeleport" to="GameSave" method="_on_EndTeleport_level_complete"]
 [connection signal="pressed" from="ButtonBlue" to="." method="_on_ButtonBlue_pressed"]
