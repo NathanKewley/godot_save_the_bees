@@ -17,3 +17,7 @@ It works quite well but there are some gotchas of course:
 * install the vita tempalte in godot via the `editor -> manage export templates`
 * in `project settings -> general -> rendering -> quality` enable fallback to GLES2
 * Prob other shit I dont remember // have not encountered yet
+
+## Web Version
+
+A web version is playable [here](https://nkew4630blog.z8.web.core.windows.net/savebees/savethebees.html)

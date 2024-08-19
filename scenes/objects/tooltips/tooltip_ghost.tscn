@@ -14,11 +14,11 @@ scale = Vector2( 4.22826, 5.53572 )
 texture = ExtResource( 1 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = -14.0
-margin_right = 176.0
-margin_bottom = 68.0
-text = "Move to the button. Then
-press 'Start' to reset
+margin_left = -15.0
+margin_top = 8.0
+margin_right = 175.0
+margin_bottom = 76.0
+text = "Press 'Start' to reset
 time and generate a ghost
 of your last moves"
 align = 1

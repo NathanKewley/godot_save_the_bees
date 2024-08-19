@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://assets/gfx/Water.png" type="Texture" id=1]
 [ext_resource path="res://assets/gfx/Grass.png" type="Texture" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://scenes/objects/interactable/EndTeleport.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/objects/interactable/BridgeBlue.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/objects/interactable/ButtonBlue.tscn" type="PackedScene" id=7]
-[ext_resource path="res://scenes/objects/tooltips/tooltip_reset.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/objects/tooltips/tooltip_ghost.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scripts/levels/Level3.gd" type="Script" id=10]
 [ext_resource path="res://scenes/HUD.tscn" type="PackedScene" id=11]
@@ -509,10 +508,6 @@ position = Vector2( 232, 200 )
 
 [node name="BridgeBlue3" parent="." instance=ExtResource( 6 )]
 position = Vector2( 232, 232 )
-
-[node name="tooltip_reset" parent="." instance=ExtResource( 8 )]
-position = Vector2( 170, 296 )
-scale = Vector2( 0.75, 0.75 )
 
 [node name="tooltip_ghost" parent="." instance=ExtResource( 9 )]
 position = Vector2( 160, 144 )
