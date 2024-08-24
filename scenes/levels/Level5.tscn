@@ -520,7 +520,7 @@ position = Vector2( 49, 31 )
 position = Vector2( 49, 56 )
 
 [node name="tooltip_rock_time" parent="." instance=ExtResource( 13 )]
-position = Vector2( 55, -16 )
+position = Vector2( 66, 109 )
 scale = Vector2( 0.75, 0.75 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]

@@ -390,11 +390,11 @@ position = Vector2( 261, 100 )
 [node name="GameSave" parent="." instance=ExtResource( 5 )]
 
 [node name="tooltip_movement" parent="." instance=ExtResource( 6 )]
-position = Vector2( 197, 137 )
+position = Vector2( 246, 141 )
 scale = Vector2( 0.75, 0.75 )
 
 [node name="tooltip_win" parent="." instance=ExtResource( 7 )]
-position = Vector2( 157, 43 )
+position = Vector2( 159, 41 )
 scale = Vector2( 0.75, 0.75 )
 
 [node name="HUD" parent="." instance=ExtResource( 8 )]

@@ -10,12 +10,13 @@ __meta__ = {
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 59, 18 )
-scale = Vector2( 3.45652, 3.07143 )
 texture = ExtResource( 1 )
 
 [node name="Label" type="Label" parent="."]
-margin_right = 40.0
-margin_bottom = 14.0
-text = "Use The DPAD to
-Move"
-align = 1
+margin_left = -30.0
+margin_top = -3.0
+margin_right = 197.0
+margin_bottom = 36.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Use The DPAD to Move"
+valign = 1

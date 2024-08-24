@@ -536,7 +536,7 @@ current = true
 [node name="HUD" parent="." instance=ExtResource( 10 )]
 
 [node name="tooltip_multiple_ghosts" parent="." instance=ExtResource( 11 )]
-position = Vector2( 103, 104 )
+position = Vector2( 138, 107 )
 scale = Vector2( 0.75, 0.75 )
 
 [connection signal="level_complete" from="EndTeleport" to="GameSave" method="_on_EndTeleport_level_complete"]
