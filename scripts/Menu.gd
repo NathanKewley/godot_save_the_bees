@@ -22,6 +22,8 @@ func _ready():
 		$LevelSelection/levelButton9.enable()
 	if($GameSave.game_save["current_level_unlock"] >= 10):
 		$LevelSelection/levelButton10.enable()
+	if($GameSave.game_save["current_level_unlock"] >= 11):
+		$LevelSelection/levelButton11.enable()
 
 func _on_levelButton1_pressed():
 	$GameSave.game_save["current_level"] = 1
@@ -69,6 +71,11 @@ func _on_levelButton9_pressed():
 	get_tree().change_scene("res://scenes/levels/Level9.tscn")
 
 func _on_levelButton10_pressed():
+	$GameSave.game_save["current_level"] = 10
+	$GameSave.save_data($GameSave.save_file)
+	get_tree().change_scene("res://scenes/levels/Level10.tscn")
+
+func _on_levelButton11_pressed():
 	$GameSave.game_save["current_level"] = 0
 	$GameSave.save_data($GameSave.save_file)
 	get_tree().change_scene("res://scenes/levels/Level2_1.tscn")
