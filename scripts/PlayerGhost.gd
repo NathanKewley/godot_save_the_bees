@@ -9,7 +9,7 @@ func _ready():
 	pass
 
 func _process(delta):
-	pass
+	step_forward()
 
 func set_start_position(x, y):
 	print("setting ghost start position ", x, ",", y)
@@ -42,9 +42,6 @@ func step_forward():
 			process_step(step)
 			print("Stepping with command: ", step)
 		current_step = current_step + 1
-		#$position.x = time_steps[current_step].x
-		#position.y = time_steps[current_step].y
-		#current_step = current_step + 1
 	
 func step_backward():
 	pass
