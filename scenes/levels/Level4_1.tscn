@@ -1,17 +1,16 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://assets/gfx/Water.png" type="Texture" id=1]
 [ext_resource path="res://assets/gfx/Grass.png" type="Texture" id=2]
 [ext_resource path="res://scenes/objects/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/control/GameSave.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/objects/interactable/EndTeleport.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/objects/tooltips/tooltip_breaking_bridge.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/objects/interactable/BridgeRed.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/objects/interactable/BridgeBlue.tscn" type="PackedScene" id=7]
-[ext_resource path="res://scripts/Level6.gd" type="Script" id=8]
+[ext_resource path="res://scenes/objects/interactable/ButtonRed.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/objects/interactable/ButtonBlue.tscn" type="PackedScene" id=9]
 [ext_resource path="res://scenes/HUD.tscn" type="PackedScene" id=10]
-[ext_resource path="res://scenes/objects/interactable/Rock.tscn" type="PackedScene" id=11]
-[ext_resource path="res://scenes/objects/interactable/BridgeBreaking.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scripts/levels/Level4_1.gd" type="Script" id=11]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -475,74 +474,71 @@ points = PoolVector2Array( 7.875, 0, 16, 0, 16, 16, 8.1875, 16 )
 } ]
 27/z_index = 0
 
-[node name="Level6" type="TileMap"]
+[node name="Level4_1" type="TileMap"]
 position = Vector2( -184, 26 )
 tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 16 )
 cell_custom_transform = Transform2D( 8, 0, 0, 8, 0, 0 )
 show_collision = true
 format = 1
-tile_data = PoolIntArray( -589816, 23, 0, -589815, 23, 0, -589814, 23, 0, -589813, 23, 0, -524280, 23, 0, -524279, 6, 0, -524278, 8, 0, -524277, 23, 0, -458744, 23, 0, -458743, 9, 0, -458742, 11, 0, -458741, 23, 0, -393208, 23, 0, -393207, 12, 0, -393206, 14, 0, -393205, 23, 0, -327672, 23, 0, -327669, 23, 0, -262136, 23, 0, -262135, 6, 0, -262134, 8, 0, -262133, 23, 0, -196600, 23, 0, -196599, 12, 0, -196598, 14, 0, -196597, 23, 0, -131071, 23, 0, -131070, 23, 0, -131069, 23, 0, -131068, 23, 0, -131067, 23, 0, -131066, 23, 0, -131065, 23, 0, -131064, 23, 0, -131061, 23, 0, -131060, 23, 0, -131059, 23, 0, -131058, 23, 0, -131057, 23, 0, -131056, 23, 0, -131055, 23, 0, -65535, 23, 0, -65534, 6, 0, -65533, 7, 0, -65532, 7, 0, -65531, 8, 0, -65529, 6, 0, -65528, 7, 0, -65527, 7, 0, -65526, 7, 0, -65525, 8, 0, -65523, 6, 0, -65522, 7, 0, -65521, 7, 0, -65520, 8, 0, -65519, 23, 0, 1, 23, 0, 2, 12, 0, 3, 13, 0, 4, 13, 0, 5, 14, 0, 7, 12, 0, 8, 13, 0, 9, 13, 0, 10, 13, 0, 11, 14, 0, 13, 12, 0, 14, 13, 0, 15, 20, 0, 16, 11, 0, 17, 23, 0, 65537, 23, 0, 65538, 23, 0, 65539, 23, 0, 65540, 23, 0, 65541, 23, 0, 65542, 23, 0, 65543, 23, 0, 65544, 23, 0, 65547, 23, 0, 65548, 23, 0, 65549, 23, 0, 65550, 23, 0, 65551, 9, 0, 65552, 11, 0, 65553, 23, 0, 131080, 23, 0, 131081, 6, 0, 131082, 8, 0, 131083, 23, 0, 131084, 23, 0, 131085, 23, 0, 131086, 23, 0, 131087, 9, 0, 131088, 11, 0, 131089, 23, 0, 196616, 23, 0, 196617, 9, 0, 196618, 21, 0, 196619, 8, 0, 196621, 6, 0, 196622, 7, 0, 196623, 22, 0, 196624, 11, 0, 196625, 23, 0, 262152, 23, 0, 262153, 9, 0, 262154, 19, 0, 262155, 14, 0, 262157, 12, 0, 262158, 13, 0, 262159, 13, 0, 262160, 14, 0, 262161, 23, 0, 327688, 23, 0, 327689, 12, 0, 327690, 14, 0, 327691, 23, 0, 327692, 23, 0, 327693, 23, 0, 327694, 23, 0, 327695, 23, 0, 327696, 23, 0, 327697, 23, 0, 393224, 23, 0, 393225, 23, 0, 393226, 23, 0, 393227, 23, 0 )
-script = ExtResource( 8 )
+tile_data = PoolIntArray( -65528, 23, 0, -65527, 23, 0, -65526, 23, 0, -65525, 23, 0, -65524, 23, 0, -65523, 23, 0, -65522, 23, 0, -65521, 23, 0, -65520, 23, 0, -65519, 23, 0, -65518, 23, 0, 8, 23, 0, 9, 6, 0, 10, 7, 0, 11, 7, 0, 12, 8, 0, 13, 23, 0, 14, 6, 0, 15, 7, 0, 16, 7, 0, 17, 8, 0, 18, 23, 0, 65544, 23, 0, 65545, 12, 0, 65546, 13, 0, 65547, 13, 0, 65548, 14, 0, 65549, 23, 0, 65550, 12, 0, 65551, 13, 0, 65552, 13, 0, 65553, 14, 0, 65554, 23, 0, 131079, 23, 0, 131080, 23, 0, 131081, 23, 0, 131084, 23, 0, 131085, 23, 0, 131086, 23, 0, 131087, 23, 0, 131088, 23, 0, 131089, 23, 0, 131090, 23, 0, 131091, 23, 0, 196615, 23, 0, 196616, 6, 0, 196617, 7, 0, 196618, 7, 0, 196619, 7, 0, 196620, 7, 0, 196621, 7, 0, 196622, 7, 0, 196623, 7, 0, 196624, 7, 0, 196625, 7, 0, 196626, 8, 0, 196627, 23, 0, 262151, 23, 0, 262152, 9, 0, 262153, 0, 0, 262154, 0, 0, 262155, 5, 0, 262156, 0, 0, 262157, 4, 0, 262158, 3, 0, 262159, 5, 0, 262160, 0, 0, 262161, 0, 0, 262162, 11, 0, 262163, 23, 0, 327687, 23, 0, 327688, 12, 0, 327689, 13, 0, 327690, 13, 0, 327691, 13, 0, 327692, 13, 0, 327693, 13, 0, 327694, 13, 0, 327695, 13, 0, 327696, 13, 0, 327697, 13, 0, 327698, 14, 0, 327699, 23, 0, 393223, 23, 0, 393224, 23, 0, 393225, 23, 0, 393228, 23, 0, 393229, 23, 0, 393230, 23, 0, 393233, 23, 0, 393234, 23, 0, 393235, 23, 0, 458760, 23, 0, 458761, 6, 0, 458762, 7, 0, 458763, 7, 0, 458764, 8, 0, 458765, 23, 0, 458766, 6, 0, 458767, 7, 0, 458768, 7, 0, 458769, 8, 0, 458770, 23, 0, 524296, 23, 0, 524297, 12, 0, 524298, 13, 0, 524299, 13, 0, 524300, 14, 0, 524301, 23, 0, 524302, 12, 0, 524303, 13, 0, 524304, 13, 0, 524305, 14, 0, 524306, 23, 0, 589832, 23, 0, 589833, 23, 0, 589834, 23, 0, 589835, 23, 0, 589836, 23, 0, 589837, 23, 0, 589838, 23, 0, 589841, 23, 0, 589842, 23, 0, 655374, 6, 0, 655375, 7, 0, 655376, 7, 0, 655377, 8, 0, 720910, 12, 0, 720911, 13, 0, 720912, 13, 0, 720913, 14, 0 )
+script = ExtResource( 11 )
 
 [node name="TextureRect" type="TextureRect" parent="."]
 show_behind_parent = true
-margin_left = -276.0
-margin_top = -301.0
-margin_right = 740.0
-margin_bottom = 394.0
+margin_left = -239.0
+margin_top = -255.0
+margin_right = 777.0
+margin_bottom = 440.0
 texture = ExtResource( 1 )
 stretch_mode = 2
 
 [node name="EndTeleport" parent="." instance=ExtResource( 5 )]
-position = Vector2( 160, -111 )
+position = Vector2( 256, 175 )
 
 [node name="GameSave" parent="." instance=ExtResource( 4 )]
 
-[node name="HUD" parent="." instance=ExtResource( 10 )]
-
-[node name="BridgeBreaking" parent="." instance=ExtResource( 12 )]
-position = Vector2( 104, 0 )
-
-[node name="BridgeBreaking3" parent="." instance=ExtResource( 12 )]
-position = Vector2( 160, 24 )
-rotation = 1.5708
-
-[node name="BridgeBreaking5" parent="." instance=ExtResource( 12 )]
-position = Vector2( 160, -24 )
-rotation = 1.5708
-
-[node name="BridgeBreaking8" parent="." instance=ExtResource( 12 )]
-position = Vector2( 200, 64 )
-
 [node name="BridgeBlue" parent="." instance=ExtResource( 7 )]
-position = Vector2( 200, 0 )
+position = Vector2( 176, 104 )
+rotation = 1.5708
+
+[node name="BridgeBlue2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 176, 40 )
+rotation = 1.5708
 
 [node name="BridgeBlue3" parent="." instance=ExtResource( 7 )]
-position = Vector2( 160, -72 )
+position = Vector2( 256, 153 )
 rotation = 1.5708
 
-[node name="tooltip_breaking_bridge" parent="." instance=ExtResource( 6 )]
-position = Vector2( 127, 107 )
-scale = Vector2( 0.75, 0.75 )
+[node name="BridgeRed" parent="." instance=ExtResource( 6 )]
+position = Vector2( 256, 104 )
 
 [node name="ButtonBlue" parent="." instance=ExtResource( 9 )]
-position = Vector2( 47, -1 )
+position = Vector2( 175, 128 )
 
-[node name="Rock" parent="." instance=ExtResource( 11 )]
-position = Vector2( 72, -2 )
+[node name="ButtonBlue2" parent="." instance=ExtResource( 9 )]
+position = Vector2( 256, 128 )
+
+[node name="ButtonRed" parent="." instance=ExtResource( 8 )]
+position = Vector2( 176, 15 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
-position = Vector2( 160, 78 )
+position = Vector2( 213, 67 )
 __meta__ = {
 "_edit_group_": true
 }
-level_allowed_ghosts = 1
+level_allowed_ghosts = 3
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 current = true
 
+[node name="HUD" parent="." instance=ExtResource( 10 )]
+
 [connection signal="level_complete" from="EndTeleport" to="GameSave" method="_on_EndTeleport_level_complete"]
 [connection signal="pressed" from="ButtonBlue" to="." method="_on_ButtonBlue_pressed"]
 [connection signal="unpressed" from="ButtonBlue" to="." method="_on_ButtonBlue_unpressed"]
+[connection signal="pressed" from="ButtonBlue2" to="." method="_on_ButtonBlue2_pressed"]
+[connection signal="unpressed" from="ButtonBlue2" to="." method="_on_ButtonBlue2_unpressed"]
+[connection signal="pressed" from="ButtonRed" to="." method="_on_ButtonRed_pressed"]
+[connection signal="unpressed" from="ButtonRed" to="." method="_on_ButtonRed_unpressed"]
 [connection signal="time_reset" from="Player" to="." method="_on_Player_time_reset"]

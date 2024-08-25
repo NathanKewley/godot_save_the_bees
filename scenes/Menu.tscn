@@ -480,7 +480,7 @@ label = "11"
 
 [node name="levelButton12" parent="LevelSelection" instance=ExtResource( 10 )]
 position = Vector2( 81, 179 )
-label = "?"
+label = "12"
 
 [node name="levelButton13" parent="LevelSelection" instance=ExtResource( 10 )]
 position = Vector2( 123, 179 )
@@ -537,3 +537,4 @@ uppercase = true
 [connection signal="pressed" from="LevelSelection/levelButton9" to="." method="_on_levelButton9_pressed"]
 [connection signal="pressed" from="LevelSelection/levelButton10" to="." method="_on_levelButton10_pressed"]
 [connection signal="pressed" from="LevelSelection/levelButton11" to="." method="_on_levelButton11_pressed"]
+[connection signal="pressed" from="LevelSelection/levelButton12" to="." method="_on_levelButton12_pressed"]
