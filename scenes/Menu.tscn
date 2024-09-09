@@ -8,6 +8,8 @@
 [ext_resource path="res://scenes/objects/interactable/Rock.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/objects/interactable/EndTeleport.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/control/GameSave.tscn" type="PackedScene" id=8]
+[ext_resource path="res://assets/gfx/menu/heading.png" type="Texture" id=9]
+[ext_resource path="res://scenes/objects/ui/level_button.tscn" type="PackedScene" id=10]
 
 [sub_resource type="ConvexPolygonShape2D" id=5]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -365,12 +367,6 @@ font_data = ExtResource( 2 )
 size = 13
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=18]
-font_data = ExtResource( 2 )
-
-[sub_resource type="Theme" id=19]
-default_font = SubResource( 18 )
-
 [node name="Menu" type="Node2D"]
 position = Vector2( 78, 12 )
 script = ExtResource( 1 )
@@ -379,7 +375,7 @@ script = ExtResource( 1 )
 tile_set = SubResource( 1 )
 cell_size = Vector2( 16, 16 )
 format = 1
-tile_data = PoolIntArray( -131061, 9, 0, -131060, 0, 0, -131059, 11, 0, -65525, 9, 0, -65524, 4, 0, -65523, 11, 0, 0, 6, 0, 1, 8, 0, 11, 9, 0, 12, 4, 0, 13, 11, 0, 65536, 12, 0, 65537, 14, 0, 65547, 9, 0, 65548, 0, 0, 65549, 11, 0, 131077, 6, 0, 131078, 8, 0, 131083, 9, 0, 131084, 0, 0, 131085, 11, 0, 196613, 12, 0, 196614, 14, 0, 196619, 9, 0, 196620, 0, 0, 196621, 11, 0, 262155, 9, 0, 262156, 5, 0, 262157, 21, 0, 262158, 7, 0, 262159, 7, 0, 262160, 7, 0, 262161, 7, 0, 262162, 7, 0, 262163, 7, 0, 262164, 7, 0, 262165, 7, 0, 327691, 9, 0, 327692, 0, 0, 327693, 1, 0, 327694, 1, 0, 327695, 4, 0, 327696, 0, 0, 327697, 1, 0, 327698, 0, 0, 327699, 5, 0, 327700, 0, 0, 327701, 0, 0, 458748, 7, 0, 458749, 7, 0, 458750, 7, 0, 458751, 7, 0, 393216, 7, 0, 393217, 7, 0, 393218, 7, 0, 393219, 7, 0, 393220, 7, 0, 393221, 7, 0, 393222, 7, 0, 393223, 8, 0, 393227, 12, 0, 393228, 13, 0, 393229, 13, 0, 393230, 13, 0, 393231, 13, 0, 393232, 13, 0, 393233, 13, 0, 393234, 13, 0, 393235, 13, 0, 393236, 13, 0, 393237, 13, 0, 524284, 0, 0, 524285, 5, 0, 524286, 0, 0, 524287, 1, 0, 458752, 0, 0, 458753, 0, 0, 458754, 4, 0, 458755, 1, 0, 458756, 0, 0, 458757, 5, 0, 458758, 0, 0, 458759, 11, 0, 589820, 0, 0, 589821, 1, 0, 589822, 4, 0, 589823, 0, 0, 524288, 5, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 1, 0, 524294, 0, 0, 524295, 11, 0, 524307, 6, 0, 524308, 8, 0, 655356, 13, 0, 655357, 13, 0, 655358, 13, 0, 655359, 13, 0, 589824, 13, 0, 589825, 13, 0, 589826, 13, 0, 589827, 13, 0, 589828, 13, 0, 589829, 20, 0, 589830, 0, 0, 589831, 11, 0, 589843, 12, 0, 589844, 14, 0, 655365, 9, 0, 655366, 0, 0, 655367, 11, 0, 720901, 9, 0, 720902, 0, 0, 720903, 11, 0, 720912, 6, 0, 720913, 8, 0, 786437, 9, 0, 786438, 0, 0, 786439, 11, 0, 786448, 12, 0, 786449, 14, 0, 851973, 9, 0, 851974, 4, 0, 851975, 11, 0, 851977, 6, 0, 851978, 8, 0, 917509, 9, 0, 917510, 5, 0, 917511, 11, 0, 917513, 12, 0, 917514, 14, 0, 983045, 9, 0, 983046, 0, 0, 983047, 11, 0 )
+tile_data = PoolIntArray( -131061, 9, 0, -131060, 0, 0, -131059, 11, 0, -65525, 9, 0, -65524, 4, 0, -65523, 11, 0, 0, 6, 0, 1, 8, 0, 11, 9, 0, 12, 4, 0, 13, 11, 0, 65536, 12, 0, 65537, 14, 0, 65547, 9, 0, 65548, 0, 0, 65549, 11, 0, 131077, 6, 0, 131078, 8, 0, 131083, 9, 0, 131084, 0, 0, 131085, 11, 0, 196613, 12, 0, 196614, 14, 0, 196619, 9, 0, 196620, 0, 0, 196621, 11, 0, 262155, 9, 0, 262156, 5, 0, 262157, 21, 0, 262158, 7, 0, 262159, 7, 0, 262160, 7, 0, 262161, 7, 0, 262162, 7, 0, 262163, 7, 0, 262164, 7, 0, 262165, 7, 0, 262166, 7, 0, 262167, 7, 0, 262168, 7, 0, 262169, 7, 0, 262170, 7, 0, 327691, 9, 0, 327692, 0, 0, 327693, 1, 0, 327694, 1, 0, 327695, 4, 0, 327696, 0, 0, 327697, 1, 0, 327698, 0, 0, 327699, 5, 0, 327700, 0, 0, 327701, 0, 0, 327702, 2, 0, 327703, 2, 0, 327704, 2, 0, 327705, 2, 0, 327706, 2, 0, 458746, 7, 0, 458747, 7, 0, 458748, 7, 0, 458749, 7, 0, 458750, 7, 0, 458751, 7, 0, 393216, 7, 0, 393217, 7, 0, 393218, 7, 0, 393219, 7, 0, 393220, 7, 0, 393221, 7, 0, 393222, 7, 0, 393223, 8, 0, 393227, 12, 0, 393228, 13, 0, 393229, 13, 0, 393230, 13, 0, 393231, 13, 0, 393232, 13, 0, 393233, 13, 0, 393234, 13, 0, 393235, 13, 0, 393236, 13, 0, 393237, 13, 0, 393238, 13, 0, 393239, 13, 0, 393240, 13, 0, 393241, 13, 0, 393242, 13, 0, 524282, 2, 0, 524283, 2, 0, 524284, 0, 0, 524285, 5, 0, 524286, 0, 0, 524287, 1, 0, 458752, 0, 0, 458753, 0, 0, 458754, 4, 0, 458755, 1, 0, 458756, 0, 0, 458757, 5, 0, 458758, 0, 0, 458759, 11, 0, 589818, 2, 0, 589819, 2, 0, 589820, 0, 0, 589821, 1, 0, 589822, 4, 0, 589823, 0, 0, 524288, 5, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 1, 0, 524294, 0, 0, 524295, 11, 0, 524307, 6, 0, 524308, 8, 0, 655354, 13, 0, 655355, 13, 0, 655356, 13, 0, 655357, 13, 0, 655358, 13, 0, 655359, 13, 0, 589824, 13, 0, 589825, 13, 0, 589826, 13, 0, 589827, 13, 0, 589828, 13, 0, 589829, 20, 0, 589830, 0, 0, 589831, 11, 0, 589843, 12, 0, 589844, 14, 0, 655365, 9, 0, 655366, 0, 0, 655367, 11, 0, 720901, 9, 0, 720902, 0, 0, 720903, 11, 0, 720912, 6, 0, 720913, 8, 0, 786437, 9, 0, 786438, 0, 0, 786439, 11, 0, 786448, 12, 0, 786449, 14, 0, 851973, 9, 0, 851974, 4, 0, 851975, 11, 0, 851977, 6, 0, 851978, 8, 0, 917509, 9, 0, 917510, 5, 0, 917511, 11, 0, 917513, 12, 0, 917514, 14, 0, 983045, 9, 0, 983046, 0, 0, 983047, 11, 0, 1048581, 9, 0, 1048582, 2, 0, 1048583, 11, 0, 1114117, 9, 0, 1114118, 2, 0, 1114119, 11, 0 )
 
 [node name="Rock" parent="TileMap" instance=ExtResource( 6 )]
 position = Vector2( 26, 138 )
@@ -402,30 +398,28 @@ margin_bottom = 351.0
 texture = ExtResource( 4 )
 stretch_mode = 2
 
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_left = -41.0
-margin_top = 10.0
-margin_right = 361.0
-margin_bottom = 79.0
-color = Color( 0.333333, 0.25098, 0.25098, 0.6 )
+[node name="Back" type="Sprite" parent="."]
+position = Vector2( 161, 45 )
+texture = ExtResource( 9 )
 
-[node name="Label" type="Label" parent="ColorRect"]
-margin_left = 10.0
-margin_top = 5.0
-margin_right = 390.0
-margin_bottom = 62.0
+[node name="Label" type="Label" parent="Back"]
+margin_left = -192.0
+margin_top = -33.0
+margin_right = 192.0
+margin_bottom = 33.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 3 )
 text = "Save The Bees"
 align = 1
 valign = 1
 uppercase = true
 
-[node name="EndTeleport" parent="ColorRect" instance=ExtResource( 7 )]
-position = Vector2( 30, 31 )
+[node name="EndTeleport" parent="Back" instance=ExtResource( 7 )]
+position = Vector2( -166, -2 )
 scale = Vector2( 1.5, 1.5 )
 
-[node name="EndTeleport2" parent="ColorRect" instance=ExtResource( 7 )]
-position = Vector2( 369, 33 )
+[node name="EndTeleport2" parent="Back" instance=ExtResource( 7 )]
+position = Vector2( 165, -2 )
 scale = Vector2( 1.5, 1.5 )
 
 [node name="art_credits" type="Label" parent="."]
@@ -439,89 +433,108 @@ text = "Made with art by Cup Nooble (https://cupnooble.itch.io/)"
 
 [node name="GameSave" parent="." instance=ExtResource( 8 )]
 
-[node name="LevelSelect" type="ColorRect" parent="."]
-margin_left = -41.0
-margin_top = 94.0
-margin_right = 361.0
-margin_bottom = 190.0
-color = Color( 0.333333, 0.25098, 0.25098, 0.6 )
+[node name="LevelSelection" type="Node" parent="."]
 
-[node name="level1_Button" type="Button" parent="LevelSelect"]
-margin_left = 29.0
-margin_top = 33.0
-margin_right = 74.0
-margin_bottom = 88.0
-theme = SubResource( 19 )
-disabled = true
-text = "1"
+[node name="levelButton1" parent="LevelSelection" instance=ExtResource( 10 )]
+position = Vector2( 39, 135 )
 
-[node name="level2_Button" type="Button" parent="LevelSelect"]
-margin_left = 79.0
-margin_top = 33.0
-margin_right = 124.0
-margin_bottom = 88.0
-theme = SubResource( 19 )
-disabled = true
-text = "2"
+[node name="levelButton2" parent="LevelSelection" instance=ExtResource( 10 )]
+position = Vector2( 81, 135 )
+label = "2"
 
-[node name="level3_Button" type="Button" parent="LevelSelect"]
-margin_left = 129.0
-margin_top = 33.0
-margin_right = 174.0
-margin_bottom = 88.0
-theme = SubResource( 19 )
-disabled = true
-text = "3"
+[node name="levelButton3" parent="LevelSelection" instance=ExtResource( 10 )]
+position = Vector2( 123, 135 )
+label = "3"
 
-[node name="level4_Button" type="Button" parent="LevelSelect"]
-margin_left = 179.0
-margin_top = 33.0
-margin_right = 224.0
-margin_bottom = 88.0
-theme = SubResource( 19 )
-disabled = true
-text = "4"
+[node name="levelButton4" parent="LevelSelection" instance=ExtResource( 10 )]
+position = Vector2( 165, 135 )
+label = "4"
 
-[node name="level5_Button" type="Button" parent="LevelSelect"]
-margin_left = 229.0
-margin_top = 33.0
-margin_right = 274.0
-margin_bottom = 88.0
-theme = SubResource( 19 )
-disabled = true
-text = "5"
+[node name="levelButton5" parent="LevelSelection" instance=ExtResource( 10 )]
+position = Vector2( 207, 135 )
+label = "5"
 
-[node name="level6_Button" type="Button" parent="LevelSelect"]
-margin_left = 279.0
-margin_top = 33.0
-margin_right = 324.0
-margin_bottom = 88.0
-theme = SubResource( 19 )
-disabled = true
-text = "6"
+[node name="levelButton6" parent="LevelSelection" instance=ExtResource( 10 )]
+position = Vector2( 249, 135 )
+label = "6"
 
-[node name="level7_Button" type="Button" parent="LevelSelect"]
-margin_left = 329.0
-margin_top = 33.0
-margin_right = 374.0
-margin_bottom = 88.0
-theme = SubResource( 19 )
-disabled = true
-text = "7"
+[node name="levelButton7" parent="LevelSelection" instance=ExtResource( 10 )]
+position = Vector2( 291, 135 )
+label = "7"
 
-[node name="LevelSelectLabel" type="Label" parent="LevelSelect"]
-margin_left = 1.0
-margin_right = 403.0
-margin_bottom = 30.0
+[node name="levelButton8" parent="LevelSelection" instance=ExtResource( 10 )]
+position = Vector2( 333, 135 )
+label = "8"
+
+[node name="levelButton9" parent="LevelSelection" instance=ExtResource( 10 )]
+position = Vector2( 375, 135 )
+label = "9"
+
+[node name="levelButton10" parent="LevelSelection" instance=ExtResource( 10 )]
+position = Vector2( 417, 135 )
+label = "10"
+
+[node name="levelButton11" parent="LevelSelection" instance=ExtResource( 10 )]
+position = Vector2( 39, 179 )
+label = "11"
+
+[node name="levelButton12" parent="LevelSelection" instance=ExtResource( 10 )]
+position = Vector2( 81, 179 )
+label = "12"
+
+[node name="levelButton13" parent="LevelSelection" instance=ExtResource( 10 )]
+position = Vector2( 123, 179 )
+label = "?"
+
+[node name="levelButton14" parent="LevelSelection" instance=ExtResource( 10 )]
+position = Vector2( 165, 179 )
+label = "?"
+
+[node name="levelButton15" parent="LevelSelection" instance=ExtResource( 10 )]
+position = Vector2( 207, 179 )
+label = "?"
+
+[node name="levelButton16" parent="LevelSelection" instance=ExtResource( 10 )]
+position = Vector2( 249, 179 )
+label = "?"
+
+[node name="levelButton17" parent="LevelSelection" instance=ExtResource( 10 )]
+position = Vector2( 291, 179 )
+label = "?"
+
+[node name="levelButton18" parent="LevelSelection" instance=ExtResource( 10 )]
+position = Vector2( 333, 179 )
+label = "?"
+
+[node name="levelButton19" parent="LevelSelection" instance=ExtResource( 10 )]
+position = Vector2( 375, 179 )
+label = "?"
+
+[node name="levelButton20" parent="LevelSelection" instance=ExtResource( 10 )]
+position = Vector2( 417, 179 )
+label = "?"
+
+[node name="LevelSelectLabel" type="Label" parent="LevelSelection"]
+visible = false
+margin_left = 38.0
+margin_top = 106.0
+margin_right = 440.0
+margin_bottom = 136.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Level Selection (Touch)"
 align = 1
 valign = 1
 uppercase = true
 
-[connection signal="pressed" from="LevelSelect/level1_Button" to="." method="_on_level1_Button_pressed"]
-[connection signal="pressed" from="LevelSelect/level2_Button" to="." method="_on_level2_Button_pressed"]
-[connection signal="pressed" from="LevelSelect/level3_Button" to="." method="_on_level3_Button_pressed"]
-[connection signal="pressed" from="LevelSelect/level4_Button" to="." method="_on_level4_Button_pressed"]
-[connection signal="pressed" from="LevelSelect/level5_Button" to="." method="_on_level5_Button_pressed"]
-[connection signal="pressed" from="LevelSelect/level6_Button" to="." method="_on_level6_Button_pressed"]
-[connection signal="pressed" from="LevelSelect/level7_Button" to="." method="_on_level7_Button_pressed"]
+[connection signal="pressed" from="LevelSelection/levelButton1" to="." method="_on_levelButton1_pressed"]
+[connection signal="pressed" from="LevelSelection/levelButton2" to="." method="_on_levelButton2_pressed"]
+[connection signal="pressed" from="LevelSelection/levelButton3" to="." method="_on_levelButton3_pressed"]
+[connection signal="pressed" from="LevelSelection/levelButton4" to="." method="_on_levelButton4_pressed"]
+[connection signal="pressed" from="LevelSelection/levelButton5" to="." method="_on_levelButton5_pressed"]
+[connection signal="pressed" from="LevelSelection/levelButton6" to="." method="_on_levelButton6_pressed"]
+[connection signal="pressed" from="LevelSelection/levelButton7" to="." method="_on_levelButton7_pressed"]
+[connection signal="pressed" from="LevelSelection/levelButton8" to="." method="_on_levelButton8_pressed"]
+[connection signal="pressed" from="LevelSelection/levelButton9" to="." method="_on_levelButton9_pressed"]
+[connection signal="pressed" from="LevelSelection/levelButton10" to="." method="_on_levelButton10_pressed"]
+[connection signal="pressed" from="LevelSelection/levelButton11" to="." method="_on_levelButton11_pressed"]
+[connection signal="pressed" from="LevelSelection/levelButton12" to="." method="_on_levelButton12_pressed"]

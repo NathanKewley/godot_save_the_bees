@@ -461,11 +461,11 @@ __meta__ = {
 current = true
 
 [node name="tooltip_bridge" parent="." instance=ExtResource( 8 )]
-position = Vector2( 193, 64 )
+position = Vector2( 244, 58 )
 scale = Vector2( 0.75, 0.75 )
 
 [node name="tooltip_button" parent="." instance=ExtResource( 9 )]
-position = Vector2( 68, -64 )
+position = Vector2( 67, -69 )
 scale = Vector2( 0.75, 0.75 )
 
 [node name="HUD" parent="." instance=ExtResource( 12 )]

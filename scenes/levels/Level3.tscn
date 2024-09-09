@@ -510,7 +510,7 @@ position = Vector2( 232, 200 )
 position = Vector2( 232, 232 )
 
 [node name="tooltip_ghost" parent="." instance=ExtResource( 9 )]
-position = Vector2( 160, 144 )
+position = Vector2( 190, 148 )
 scale = Vector2( 0.6, 0.6 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]

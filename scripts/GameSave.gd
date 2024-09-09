@@ -10,7 +10,7 @@ var save_file = "user://savegame.save"
 func _ready():
 	#save_data(save_file)
 	var file_loader = File.new()
-	if not file_loader.file_exists(save_file):
+	if not file_loader.file_exists(save_file):  ## Comment this out to reset level data
 		save_data(save_file)
 	load_data(save_file)
 

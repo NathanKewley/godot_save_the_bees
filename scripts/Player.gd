@@ -7,6 +7,7 @@ signal time_reset
 export var speed = 100
 export var level_allowed_ghosts = 0
 var velocity = Vector2.ZERO
+var has_moved = false
 
 var time_steps = []
 var ghosts = []
@@ -52,6 +53,13 @@ func generate_ghost():
 		position.x = time_steps[0]['x']
 		position.y = time_steps[0]['y']
 		time_steps.clear()
+		var time_point = {
+			"steps": [],
+			"x": position.x,
+			"y": position.y
+		}
+		time_steps.append(time_point)
+
 		print("Number of ghosts: ", ghosts.size())
 		
 		# Reset all the current ghosts
@@ -59,7 +67,7 @@ func generate_ghost():
 			existing_ghost.reset()
 		
 		# finally append out new ghost to the list
-		ghosts.append(ghost)		
+		ghosts.append(ghost)	
 		
 		# emit time reset signal so level can reset required elements
 		emit_signal("time_reset")
@@ -104,15 +112,20 @@ func get_input():
 	if Input.is_action_pressed("menu"):
 		get_tree().change_scene("res://scenes/Menu.tscn")
 
+	# Record the player
+	if has_moved == true:
+		time_steps.append(time_point)
+
 	# if a move is places
 	if velocity.length() > 0:
 		# move the player and step all ghosts forward
 		velocity = velocity.normalized() * speed
-		for ghost in ghosts:
-			ghost.step_forward()
+		# for ghost in ghosts:
+		# 	ghost.step_forward()
 		
-		# record the move
-		time_steps.append(time_point)
+		# Player has moved so start recording
+		has_moved = true
+		
 	else:
 		$AnimatedSprite.stop()
 
@@ -128,28 +141,3 @@ func check_rock_collision(velocity):
 	var rock = get_slide_collision(0).collider as Rock
 	if rock:
 		rock.push(velocity)
-
-# Handle Touchscreen Input Events
-func _on_TouchScreenButtonRight_pressed():
-	Input.action_press("move_right")
-
-func _on_TouchScreenButtonRight_released():
-	Input.action_release("move_right")
-
-func _on_TouchScreenButtonLeft_pressed():
-	Input.action_press("move_left")
-
-func _on_TouchScreenButtonLeft_released():
-	Input.action_release("move_left")
-
-func _on_TouchScreenButtonUp_pressed():
-	Input.action_press("move_up")
-
-func _on_TouchScreenButtonUp_released():
-	Input.action_release("move_up")
-
-func _on_TouchScreenButtonDown_pressed():
-	Input.action_press("move_down")
-
-func _on_TouchScreenButtonDown_released():
-	Input.action_release("move_down")
